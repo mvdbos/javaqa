@@ -14,7 +14,6 @@ COPY usage.txt $TARGET_DIR
 
 RUN wget https://services.gradle.org/distributions/gradle-3.0-bin.zip -O gradle.zip
 RUN unzip gradle.zip -d /usr/local/lib/javaqa
-
-
+RUN rm gradle.zip
 
 CMD cat $TARGET_DIR/usage.txt
