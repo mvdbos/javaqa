@@ -1,0 +1,16 @@
+This container does nothing when invoking it without a command.
+
+Usage example:
+$ docker run -it --rm -v "$PWD":/app -w /app mvdbos/php-qa:latest <your-command-with-arguments>
+
+In the example above, the mounted host directory is your current working directory.
+This is the most common case, because it enables you to run the java tools on everything in
+and below that directory.
+
+Available commands in the container:
+
+* java
+* javac
+* gradle
+
+* sh (or any other command)
